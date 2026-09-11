@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+* {
+    font-family: "Inspiration", cursive;
+}
+
+body {
+    background-color:lightsalmon;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    background-color: #CBC3E3;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111111;
+}
+
+.selected-navbar {
+    color: orangered !important
+}
+
+.big-img {
+    max-width: 200px;
+}
