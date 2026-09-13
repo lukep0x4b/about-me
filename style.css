@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
 
+:root {
+  --bg-color: lightsalmon;
+  --nav-color: #CBC3E3;
+  --accent-color: orangered;
+}
+
 * {
-    font-family: "Inspiration", cursive;
+  box-sizing: border-box;
+  font-family: "Inspiration", cursive;
 }
 
 body {
-    background-color:lightsalmon;
+  background-color:var(--bg-color);
+  margin: 0;
 }
 
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    background-color: #CBC3E3;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--nav-color);
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .navbar li {
-  float: left;
+  flex: 1 1 auto;
 }
 
-.navbar li a {
+.navbar a {
   display: block;
-  color: white;
+  padding: 14px;
   text-align: center;
-  padding: 14px 16px;
+  color: white;
   text-decoration: none;
 }
 
@@ -34,9 +42,72 @@ body {
 }
 
 .selected-navbar {
-    color: orangered !important
+    color: var(--accent-color) !important
 }
 
-.big-img {
-    max-width: 200px;
+/*mobile stuff*/
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  padding: 14px;
+  background: var(--nav-color);
+  color: white;
+  cursor: pointer;
+}
+
+/*grid layouts*/
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/*desktop has 2 columns*/
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .navbar {
+    /*keep items on the left*/
+    justify-content: flex-start;
+  }
+  .navbar li {
+    flex: 0 0 100px;
+  }
+}
+
+/*tablet has one larger column*/
+@media (min-width: 600px) and (max-width: 899px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/*mobile has one small column, so just stack it all*/
+@media (max-width: 599px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar li {
+    display: none;
+  }
+  /*i have no idea how to do this without using JS, so good luck*/
+  .nav-toggle:checked + .hamburger + .navbar li {
+    display: block;
+  }
 }

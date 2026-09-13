@@ -4,42 +4,55 @@
     <meta charset="UTF-8">
     <title>Luke Page's About Me</title>
     <link rel="stylesheet" href="style.css">
+    <!--might actually want to report the window size-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <!--look at this cool text i found ☰☰☰☰☰☰☰☰☰☰-->
+    <label for="nav-toggle" class="hamburger">☰ Menu</label>
     <ul class="navbar">
         <li><a href="index.html" class="selected-navbar">Home</a></li>
         <li><a href="memes.html">Memes</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <h2>About Me</h2>
-    <p>I am Luke Page! I am a Software Engineer who makes Video Games.</p>
-    <p>I study Computer Science at the University of Charleston.</p>
-    <img src="https://lukepage.com/media/lazy.gif" alt="A GIF of me doing work (a construction worker dancing instead of doing their job)" />
-    <h2>Knowledge</h2>
-    <h3>Programming Languages I Know</h3>
-    <ol>
-        <li>C#</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>Luau</li>
-        <li>Python</li>
-        <li>Go</li>
-    </ol>
-    <h3>Subjects in School I Like</h3>
-    <ul>
-        <li>Computer Science</li>
-        <li>Math</li>
-        <li>English</li>
-    </ul>
-    <h2>Contact Me</h2>
-    <img src="https://static.vecteezy.com/system/resources/previews/047/128/512/non_2x/communication-and-contact-us-or-customer-support-hotline-people-connect-hand-using-a-laptop-and-touching-on-virtual-screen-contact-icons-email-and-address-live-chat-with-internet-wifi-photo.jpg" class="big-img" alt="An image saying 'Contact us'" />
-    <h3>Email</h3>
-    <a href="mailto:iam@lukepage,com">iam@lukepage.com</a>
-    <h3>Gravatar</h3>
-    <a href="https://gravatar.com/dreamlandversatilee88d850bbf">My Gravatar Page</a>
-    <h2>BONUS CONTENT</h2>
-    <a href="./IMG_5463.JPG">Click Here</a>
-    <a> to see an image of me at a swimming pool.</a>
+    <main class="grid-container">
+        <!--It's okay! divs are not scary and are used as containers for flow content!-->
+        <div>
+            <h1>Hello World!</h1>
+            <h2>About Me</h2>
+            <p>I am Luke Page! I am a Software Engineer who makes Video Games.</p>
+            <p>I study Computer Science at the University of Charleston.</p>
+            <img src="https://lukepage.com/media/lazy.gif" alt="A GIF of me doing work (a construction worker dancing instead of doing their job)" />
+        </div>
+
+        <div>
+            <h2>Knowledge</h2>
+            <h3>Programming Languages I Know</h3>
+            <ol>
+                <li>C#</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Luau</li>
+                <li>Python</li>
+                <li>Go</li>
+            </ol>
+            <h3>Subjects in School I Like</h3>
+            <ul>
+                <li>Computer Science</li>
+                <li>Math</li>
+                <li>English</li>
+            </ul>
+            <h2>Contact Me</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/047/128/512/non_2x/communication-and-contact-us-or-customer-support-hotline-people-connect-hand-using-a-laptop-and-touching-on-virtual-screen-contact-icons-email-and-address-live-chat-with-internet-wifi-photo.jpg" class="big-img" alt="An image saying 'Contact us'" />
+            <h3>Email</h3>
+            <a href="mailto:iam@lukepage,com">iam@lukepage.com</a>
+            <h3>Gravatar</h3>
+            <a href="https://gravatar.com/dreamlandversatilee88d850bbf">My Gravatar Page</a>
+            <h2>BONUS CONTENT</h2>
+            <a href="./IMG_5463.JPG">Click Here</a>
+            <a> to see an image of me at a swimming pool.</a>
+        </div>
+    </main>
 </body>
 </html>
